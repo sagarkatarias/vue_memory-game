@@ -1,5 +1,8 @@
 # vue_memory_game
 
+## Firebase Hosting at
+*https://vue-memory-game.web.app/
+
 ## Project setup
 ```
 npm install
