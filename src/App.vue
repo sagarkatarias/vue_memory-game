@@ -1,28 +1,47 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <GameBoard class="game-area" :columns="4" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import GameBoard from './components/GameBoard.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    GameBoard
+  },
+  props: {
+    columns: {
+      type: Number,
+      default: 4
+    }
   }
-}
+};
 </script>
 
 <style>
+body {
+  margin: 0;
+  background: radial-gradient(#485563, #29323c);
+  color: white;
+}
+
+html {
+  min-height: 100vh;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 50px;
+}
+
+.game-area {
+  max-width: 600px;
+  margin: auto;
 }
 </style>
